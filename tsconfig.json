@@ -1,6 +1,22 @@
 {
-  "extends": "expo/tsconfig.base",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Expo",
   "compilerOptions": {
-    "strict": true
-  }
+    // expo/tsconfig.base
+    "jsx": "react-native",
+    "strict": true,
+    "lib": ["DOM", "ESNext"], //Permitir el uso de las últimas funciones y bibliotecas propuestas por ECMAScript .
+    "moduleResolution": "node", //Emule cómo Metro y Webpack resuelven los módulos.
+    "noEmit": true, //Utilice únicamente el compilador de TypeScript (TSC) para comprobar el código. El empaquetador Metro es responsable de compilar TypeScript en JavaScript.
+    "resolveJsonModule": true, //Habilita la importación de archivos .json . El comportamiento predeterminado de Metro es permitir la importación de archivos json como objetos JS.
+    "skipLibCheck": true,//Omita la verificación de tipo de todos los archivos de declaración ( *.d.ts).
+    "target": "ESNext",//Compile con la última versión de ECMAScript.
+    //CUSTOM
+    "baseUrl": "src"
+  },
+  "include": [
+    "./src/ts/**/*"
+  ],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"],
+  "extends": "expo/tsconfig.base"
 }

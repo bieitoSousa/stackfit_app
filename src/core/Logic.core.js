@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 
-import { StyleSheet } from 'react-native';
+import { StyleSheet, useColorScheme } from 'react-native';
 
 import AppLoading from 'expo-app-loading';
 
@@ -32,6 +32,8 @@ import { useFonts,
   } from '@expo-google-fonts/montserrat';
 
 export const LogicCore = () => {
+
+    const colorScheme = useColorScheme();
     // const dispatch = useDispatch();
     // load fonts
     let [fontsLoaded] = useFonts({
@@ -60,7 +62,7 @@ export const LogicCore = () => {
         return (
             <SafeAreaView style={styles.container} >
                     <ErrorLogger></ErrorLogger>
-                    <AppNavigation></AppNavigation>
+                    <AppNavigation colorScheme={colorScheme} ></AppNavigation>
             </SafeAreaView>
         );
     }   
