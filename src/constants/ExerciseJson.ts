@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default  {
-    exercises : [
+export const ExerciseJson = {
+    data : [
         // WARN_UP
         {
             id:'DEEP_SQT_OH_ROT',

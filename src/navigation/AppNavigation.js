@@ -7,7 +7,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { icons, THEME } from '../theme';
 
 import { HomeStack } from '../screens/Home/HomeStack';
-import { TachographStack } from '../screens/Tachograph/TachographStack';
 import { ConsumeStack } from '../screens/Consume/ConsumeStack';
 import { DocumentStack } from '../screens/Document/DocumentStack';
 import { EessStack } from '../screens/Eess/EessStack';

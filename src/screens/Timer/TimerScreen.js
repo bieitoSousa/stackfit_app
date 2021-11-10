@@ -6,13 +6,13 @@ import { TextDefault } from '../../components/text/TextDefault'
 import { images } from '../../theme';
 
 
-export const TachographScreen = ({ navigation }) => {
+export const TimerScreen = ({ navigation }) => {
 
     const { t, i18n } = useTranslation();
     return (
         <View style ={styles.container}>
             <TextDefault>
-                {t('TACHOGRAPH')}
+                {t('TIMER')}
             </TextDefault>
             <Image style={styles.image}
                          sorce={images.homeScreenImg}

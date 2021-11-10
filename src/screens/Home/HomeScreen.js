@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, StyleSheet, View } from 'react-native'
-import { getStaroilMarketStaroilList } from '../../store/marker/market.effect';
-import { getRegionSpainList } from '../../store/region/region.effect';
+import { getStaroilMarketStaroilList } from '../../context/marker/market.effect';
+import { getRegionSpainList } from '../../context/region/region.effect';
 import { BodyMap } from '../../components/body/BodyMap';
 import { THEME } from '../../theme';
 

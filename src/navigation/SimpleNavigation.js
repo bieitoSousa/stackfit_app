@@ -7,7 +7,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { icons, THEME } from '../theme';
 
 import { HomeStack } from '../screens/Home/HomeStack';
-import { TachographStack } from '../screens/Tachograph/TachographStack';
 import { ConsumeStack } from '../screens/Consume/ConsumeStack';
 import { DocumentStack } from '../screens/Document/DocumentStack';
 import { EessStack } from '../screens/Eess/EessStack';
@@ -66,7 +65,7 @@ export const MainTabs = () => {
                     let iconName;
                     if (route.name === 'Home') {
                         iconName = focused ? icons.homeActive : icons.homeInactive;
-                    } else if (route.name === 'Tachograph') {
+                    } else if (route.name === 'Timer') {
                         iconName = focused ? icons.tachographActive : icons.tachographInactive;
                     } else if (route.name === 'Eess') {
                         iconName = focused ? icons.staroilActive : icons.staroilInactive;
@@ -111,8 +110,8 @@ export const MainTabs = () => {
                 options={{ headerShown: false }}
             />
             <Tab.Screen
-                name="Tachograph"
-                component={TachographStack}
+                name="Timer"
+                component={TimerStack}
                 options={{ headerShown: false }}
             />
             <Tab.Screen

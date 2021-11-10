@@ -5,10 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { View } from 'react-native'
 import { TextDefault } from '../../components/text/TextDefault'
 import { THEME } from '../../theme';
-import { TachographScreen } from './TachographScreen';
+import { TimerScreen } from './TimerScreen';
 
 
-export const TachographStack = ({ navigation }) => {
+export const TimerStack = ({ navigation }) => {
 
     const Stack = createNativeStackNavigator();
     return (
@@ -37,8 +37,8 @@ export const TachographStack = ({ navigation }) => {
         }}
     >
         <Stack.Screen
-            name="TachographScreen"
-            component={TachographScreen}
+            name="TimerScreen"
+            component={TimerScreen}
             options={{ headerShown: false }}
         />
        

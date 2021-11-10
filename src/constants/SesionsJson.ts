@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default {
-    sessions: [{
+export const SessionJson = {
+    data: [{
         id:0,
-        name: '',
+        name: 'Sesion 1',
         type: '',
         date: '',
         sessionBlock: [{
@@ -44,11 +44,11 @@ export default {
             block: [{
                 reps: [3],
                 exercise: ['OVERHEAD_SQUAT'],
-                desc : 'Behind The Neck Push Press',
+                desc : ['Behind The Neck Push Press'],
             }, {
                 reps: [3],
                 exercise: ['OVERHEAD_SQUAT'],
-                desc : 'Tempo (MAX WHEIGHT 30%)',
+                desc : ['Tempo (MAX WHEIGHT 30%)'],
             }
             ]
         },
@@ -67,11 +67,11 @@ export default {
             block: [{
                 reps: [3],
                 exercise: ['OVERHEAD_SQUAT'],
-                desc : 'Increment (MAX WHEIGHT 70%)',
+                desc : ['Increment (MAX WHEIGHT 70%)'],
             }, {
                 reps: [5],
                 exercise: ['PVC_SQUAT_THERAPY_FACE_WALL'],
-                desc : 'Therapy face wall',
+                desc : ['Therapy face wall'],
             }
             ]
         },

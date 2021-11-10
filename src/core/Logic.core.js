@@ -7,7 +7,7 @@ import AppLoading from 'expo-app-loading';
 
 import { ErrorLogger } from './ErrorLogger';
 import { AppNavigation } from '../navigation/AppNavigation';
-import store from '../store';
+import context from '../context';
 import '../../localization';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFonts,

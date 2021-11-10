@@ -3,21 +3,18 @@ import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
-import { getStaroilMarketStaroilList } from '../../context/marker/market.effect';;
 import { BodySearchBar } from '../../components/body/BodySearchBar';
 import { THEME } from '../../theme';
+import { getSesionList } from '../../context/sesion/sesion.effect';
 
-export const EessScreen = ({ navigation }) => {
+export const SesionScreen = ({ navigation }) => {
     const { t, i18n } = useTranslation();
     const dispatch = useDispatch();
 
     useEffect(() => {
-        getStaroilMarketStaroilList(dispatch);
-        // getStaroilMarketWorkshopList(dispatch);
-        // getStaroilMarketRestaurantList(dispatch);
-        // getStaroilMarketHotelList(dispatch);
+        getSesionList(dispatch);
     }, []);
-    const marketStaroilData = useSelector(state => state.market.marketStaroilData);
+    const sesionData = useSelector(state => state.sesion.sesionData);
     // first element : Spain
     const [searchText, onChangeSearchText] = React.useState('');
 
@@ -25,8 +22,8 @@ export const EessScreen = ({ navigation }) => {
     // const marketRestaurantData = useSelector(state => state.market.marketRestaurantData);
     // const marketHotelData = useSelector(state => state.market.marketHotelData);
     
-    const filteredStaroilData = marketStaroilData.filter(function (staroil) {
-        return staroil.title.includes(searchText);
+    const filteredSesionData = sesionData && sesionData.filter(function (sesion) {
+        return sesion.name.includes(searchText);
     });
     
     return (
@@ -38,11 +35,11 @@ export const EessScreen = ({ navigation }) => {
                 searchText={searchText}
                 onChangeSearchText={onChangeSearchText}
             />
-            {( marketStaroilData) ?
+            {( filteredSesionData) ?
                 <View>
                     <Text>
                         {
-                            JSON.stringify(filteredStaroilData, null, 3)
+                            JSON.stringify(filteredSesionData, null, 3)
                         }
                     </Text>
                 </View>

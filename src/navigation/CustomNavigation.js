@@ -5,11 +5,11 @@ import { Animated, Dimensions, Image, Platform, StyleSheet, Text, TouchableOpaci
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreen } from '../screens/Home/HomeScreen';
-import { TachographScreen } from '../screens/Tachograph/TachographScreen';
-import { EessScreen } from '../screens/Eess/EessScreen';
-import { DocumentScreeen } from '../screens/Document/DocumentScreeen';
-import { ConsumeScreen } from '../screens/Consume/ConsumeScreen';
 import { useTranslation } from 'react-i18next';
+import { ExerciseStack } from '../screens/Exercise/ExerciseStack';
+import { SesionStack } from '../screens/Sesion/SesionStack';
+import { EessStack } from '../screens/Eess/EessStack';
+import { TimerStack } from '../screens/Timer/TimerStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -62,7 +62,7 @@ export const CustomNavigation = () => {
                 // })}
                 ></Tab.Screen>
 
-                <Tab.Screen name={"Tachograph"} component={TachographScreen} options={{
+                <Tab.Screen name={"Timer"} component={TimerStack} options={{
                     tabBarIcon: ({ focused }) => (
                         <View style={styles.containerIcon}>
                             <Image
@@ -71,7 +71,7 @@ export const CustomNavigation = () => {
                             </Image>
                         </View>
                     ),
-                    title :  t('TACHOGRAPH') ,
+                    title :  t('TIMER') ,
                     headerShown: false,
                 }}
                 // listeners={({ navigation, route }) => ({
@@ -91,7 +91,7 @@ export const CustomNavigation = () => {
                     // Extra Tab Screen For Action Button..
                 }
 
-                <Tab.Screen name={"Eess"} component={EessScreen} options={{
+                <Tab.Screen name={"Eess"} component={EessStack} options={{
                     tabBarIcon: ({ focused }) => (
                         <View style={{
                             width: 60,
@@ -124,7 +124,7 @@ export const CustomNavigation = () => {
                 // })}
                 ></Tab.Screen>
 
-                <Tab.Screen name={"Document"} component={DocumentScreeen} options={{
+                <Tab.Screen name={"Sesion"} component={SesionStack} options={{
                     tabBarIcon: ({ focused }) => (
                         <View style={styles.containerIcon}>
                             <Image
@@ -133,7 +133,7 @@ export const CustomNavigation = () => {
                             </Image>
                         </View>
                     ),
-                    title :  t('DOCUMENT') ,
+                    title :  t('SESION') ,
                     headerShown: false,
                 }}
                 //  listeners={({ navigation, route }) => ({
@@ -147,7 +147,7 @@ export const CustomNavigation = () => {
                 // })}
                 ></Tab.Screen>
 
-                <Tab.Screen name={"Consume"} component={ConsumeScreen} options={{
+                <Tab.Screen name={"Exercise"} component={ExerciseStack} options={{
                     tabBarIcon: ({ focused }) => (
                         <View style={styles.containerIcon}>
                             <Image
@@ -156,7 +156,7 @@ export const CustomNavigation = () => {
                             </Image>
                         </View>
                     ),
-                    title :  t('CONSUME') ,
+                    title :  t('EXERCISE') ,
                     headerShown: false,
                 }}
                 //  listeners={({ navigation, route }) => ({
