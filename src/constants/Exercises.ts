@@ -126,8 +126,8 @@ export default  {
             img:'',
             level:0,
             rating:0,
-            variants:[{name :'Behind The Neck Push Press', img:'', desc:''}],
-            technique:['PVC_SQUAT_THERAPY_FACE_WALL'],
+            variants:[],
+            technique:[],
         },
         {
             id:'DB_POWER_CLEAN_ALT',
@@ -139,8 +139,8 @@ export default  {
             img:'',
             level:0,
             rating:0,
-            variants:[{name :'Behind The Neck Push Press', img:'', desc:''}],
-            technique:['PVC_SQUAT_THERAPY_FACE_WALL'],
+            variants:[],
+            technique:[],
         },
 
     ]
