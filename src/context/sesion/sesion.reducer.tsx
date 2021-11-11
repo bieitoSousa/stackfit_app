@@ -1,9 +1,23 @@
+import { ISesion } from "../../interface/ISesion";
 import { initialState } from "../initialState";
 import { sesionModel  } from "./sesion.models";
 import { GET_SESION_FAIL_ACTION, GET_SESION_LOADED, GET_SESION_LOADING } from "./sesion.types";
 
 
-export const sesionReducer = (state = initialState, action) => {
+export interface ISesionState {
+    sesionLoading: boolean,
+    sesionLoaded: boolean,
+    sesionLoadingFail: boolean,
+    sesionData: ISesion[] | [],
+}
+
+type SesionAction = 
+    | { type: 'GET_SESION_LOADING' }
+    | { type: 'GET_SESION_LOADED', payload: { data : ISesion[] | []}} 
+    | { type: 'GET_SESION_FAIL_ACTION' }
+
+
+export const sesionReducer = (state : ISesionState = initialState, action : SesionAction ) : ISesionState => {
     switch (action.type) {
 
         case GET_SESION_LOADING:
