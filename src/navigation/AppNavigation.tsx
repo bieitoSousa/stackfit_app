@@ -13,11 +13,18 @@ import { EessStack } from '../screens/Eess/EessStack';
 import { Image } from 'react-native';
 import { SimpleNavigation } from './SimpleNavigation';
 import { CustomNavigation } from './CustomNavigation';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 const Stack = createStackNavigator();
 const MainStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
+export type RootStackParamList = {
+    Home: undefined;
+    Profile: { userId: string };
+    Feed: { sort: 'latest' | 'top' } | undefined;
+  };
+  
+export type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
 
 export const AppNavigation = () => {
     const { t, i18n } = useTranslation();

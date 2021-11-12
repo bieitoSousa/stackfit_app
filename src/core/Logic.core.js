@@ -10,7 +10,7 @@ import { AppNavigation } from '../navigation/AppNavigation';
 import context from '../context';
 import '../../localization';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useFonts,
+import {
     Montserrat_100Thin,
     Montserrat_100Thin_Italic,
     Montserrat_200ExtraLight,
@@ -30,6 +30,24 @@ import { useFonts,
     Montserrat_900Black,
     Montserrat_900Black_Italic,
   } from '@expo-google-fonts/montserrat';
+
+  import {
+    useFonts,
+    Roboto_100Thin,
+    Roboto_100Thin_Italic,
+    Roboto_300Light,
+    Roboto_300Light_Italic,
+    Roboto_400Regular,
+    Roboto_400Regular_Italic,
+    Roboto_500Medium,
+    Roboto_500Medium_Italic,
+    Roboto_700Bold,
+    Roboto_700Bold_Italic,
+    Roboto_900Black,
+    Roboto_900Black_Italic,
+  } from '@expo-google-fonts/roboto';
+  
+
 
 export const LogicCore = () => {
 
@@ -55,6 +73,18 @@ export const LogicCore = () => {
         Montserrat_800ExtraBold_Italic,
         Montserrat_900Black,
         Montserrat_900Black_Italic,
+        Roboto_100Thin,
+        Roboto_100Thin_Italic,
+        Roboto_300Light,
+        Roboto_300Light_Italic,
+        Roboto_400Regular,
+        Roboto_400Regular_Italic,
+        Roboto_500Medium,
+        Roboto_500Medium_Italic,
+        Roboto_700Bold,
+        Roboto_700Bold_Italic,
+        Roboto_900Black,
+        Roboto_900Black_Italic,
       });  
     if (!fontsLoaded) {
         return <AppLoading />;

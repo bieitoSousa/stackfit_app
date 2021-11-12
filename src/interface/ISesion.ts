@@ -1,7 +1,9 @@
 export interface ISesion {
     id?: number;
+    img?: string;
     name?: string;
     type?: string;
+    desc?:string;
     date?: string;
     sessionBlock?: ISessionBlock[];
 }
